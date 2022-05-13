@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/word"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/wordsList"
+        app:layout_constraintTop_toBottomOf="@+id/wordsList" />
+
+    <Button
+        android:id="@+id/addToList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/word"
+        app:layout_constraintStart_toStartOf="@+id/word"
+        app:layout_constraintTop_toBottomOf="@+id/word" />
+
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Undo"
+        app:layout_constraintEnd_toEndOf="@+id/addToList"
+        app:layout_constraintStart_toStartOf="@+id/addToList"
+        app:layout_constraintTop_toBottomOf="@+id/addToList" />
+
+    <Button
+        android:id="@+id/redo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Redo"
+        app:layout_constraintEnd_toEndOf="@+id/undo"
+        app:layout_constraintStart_toStartOf="@+id/undo"
+        app:layout_constraintTop_toBottomOf="@+id/undo" />
+
+    <ListView
+        android:id="@+id/wordsList"
+        android:layout_width="409dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
